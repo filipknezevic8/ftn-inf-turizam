@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ture</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+    <link rel="stylesheet" href="../../dist/ture/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="title">TourApp</h1>
+        <ul class="nav-links">
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><a href="tour.html">Ture</a></li>
+            <li><a href="#">Restorani</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="table-form">
+            <table class="tours-table">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Dužina (km)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <div class="form-container">
+                <form id="tourForm">
+                    <label for="naziv">Naziv:</label>
+                    <input type="text" id="naziv" name="naziv"><br>
+
+                    <label for="duzina">Dužina (km):</label>
+                    <input type="number" id="duzina" name="duzina"><br>
+
+                    <div id="opis-lab"><label for="opis">Opis:</label>
+                    <textarea id="opis" name="opis"></textarea></div><br>
+
+                    <label for="tagovi">Tagovi (odvojeni sa ", "):</label>
+                    <input type="text" id="tagovi" name="tagovi"><br>
+
+                    <button type="submit" id="submitBtn">Dodaj</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="details" class="details">
+            <p>Naziv: ...</p>
+            <p>Dužina: ...</p>
+            <p>Opis: ...</p>
+            <p>Tagovi: ...</p>
+        </div>
+    </main>
+    <script src="tour.js"></script>
+</body>
+</html>
