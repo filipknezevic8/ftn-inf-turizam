@@ -1,0 +1,32 @@
+.table-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 20px;
+}
+.table-form .restaurants-table thead tr th {
+  border: 1px solid black;
+  padding: 5px;
+}
+.table-form .restaurants-table tbody tr td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.table-form .form-container {
+  border: 1px solid black;
+  padding: 10px;
+}
+.details {
+  margin: 20px;
+  width: 13%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#submitBtn {
+  margin-left: 315px;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+/*# sourceMappingURL=styles.css.map */

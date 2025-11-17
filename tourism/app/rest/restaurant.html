@@ -1,0 +1,58 @@
+    <!DOCTYPE html>
+    <html lang="sr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restorani</title>
+        <link rel="stylesheet" href="../../dist/styles.css">
+        <link rel="stylesheet" href="../../dist/rest/styles.css">
+    </head>
+    <body>
+    <nav class="navbar">
+        <h1 class="title">TourApp</h1>
+        <ul class="nav-links">
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><a href="../ture/tour.html">Ture</a></li>
+            <li><a href="./restaurant.html">Restorani</a></li>
+        </ul>
+    </nav>
+
+        <main>
+            <div class="table-form">
+                <table class="restaurants-table">
+                    <thead>
+                        <tr>
+                            <th>Naziv</th>
+                            <th>Kuhinja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <div class="form-container">
+                    <form id="restaurantForm">
+                        <label for="naziv">Naziv:</label>
+                        <input type="text" id="naziv" name="naziv"><br>
+
+                        <label for="opis">Opis:</label>
+                        <textarea id="opis" name="opis"></textarea><br>
+
+                        <label for="kuhinje">Tipovi kuhinje (odvojeni zarezom):</label>
+                        <input type="text" id="kuhinje" name="kuhinje"><br>
+
+                        <button type="submit" id="submitBtn">Dodaj</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="details" class="details">
+                <p>Naziv: ...</p>
+                <p>Opis: ...</p>
+                <p>Kuhinje: ...</p>
+            </div>
+        </main>
+
+        <script src="restaurant.js"></script>
+    </body>
+    </html>
