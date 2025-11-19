@@ -15,18 +15,70 @@
 .table-form .form-container {
   border: 1px solid black;
   padding: 10px;
+  width: 280px;
 }
-.details {
-  margin: 20px;
-  width: 13%;
+.table-form .form-container #restaurantForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.table-form .form-container #restaurantForm label {
+  display: inline-block;
+  width: 70px;
+}
+.table-form .form-container #restaurantForm .line-input {
+  display: inline-block;
+  width: 170px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 2px 0;
+  resize: none;
+  background: transparent;
+}
+.table-form .form-container #restaurantForm .chips {
+  margin-top: 6px;
+  min-height: 24px;
+}
+.table-form .form-container #restaurantForm .chip {
+  display: inline-flex;
+  align-items: center;
   border: 1px solid black;
-  padding: 10px;
+  padding: 2px 6px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.table-form .form-container #restaurantForm .chip button {
+  margin-left: 6px;
+  border: 1px solid black;
+  background: #fff;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.table-form .form-container #restaurantForm .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.table-form .form-container #restaurantForm .form-buttons #addCuisineBtn {
+  width: 32px;
+  height: 28px;
+  border: 1px solid black;
+  background: #fff;
+  cursor: pointer;
+}
+.table-form .form-container #restaurantForm .form-buttons #submitBtn {
+  padding: 3px 10px;
+  border: 1px solid black;
+  background: #fff;
+  cursor: pointer;
+  margin: 0;
 }
 
-#submitBtn {
-  margin-left: 315px;
-  margin-top: 5px;
-  padding: 2px;
+.details {
+  margin: 20px;
+  width: 280px;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

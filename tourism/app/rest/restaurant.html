@@ -32,16 +32,39 @@
 
                 <div class="form-container">
                     <form id="restaurantForm">
-                        <label for="naziv">Naziv:</label>
-                        <input type="text" id="naziv" name="naziv"><br>
+                        <div class="form-row">
+                            <label for="naziv">Naziv:</label>
+                            <input type="text" id="naziv" name="naziv" class="line-input">
+                        </div>
 
-                        <label for="opis">Opis:</label>
-                        <textarea id="opis" name="opis"></textarea><br>
+                        <div class="form-row">
+                            <label for="opis">Opis:</label>
+                            <textarea id="opis" name="opis" class="line-input"></textarea>
+                        </div>
 
-                        <label for="kuhinje">Tipovi kuhinje (odvojeni zarezom):</label>
-                        <input type="text" id="kuhinje" name="kuhinje"><br>
+                        <div class="form-row">
+                            <label for="tip">Tip:</label>
+                            <input type="text" id="tip" name="tip" class="line-input">
+                        </div>
 
-                        <button type="submit" id="submitBtn">Dodaj</button>
+                        <div class="form-row">
+                            <label for="duzina">Duzina:</label>
+                            <input type="text" id="duzina" name="duzina" class="line-input">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="kuhinjaInput">Kuhinja:</label>
+                            <input type="text" id="kuhinjaInput" name="kuhinjaInput" class="line-input">
+                        </div>
+
+                        <div id="cuisineChips" class="chips">
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" id="addCuisineBtn">+</button>
+                            <button type="submit" id="submitBtn">Dodaj</button>
+                        </div>
+                        
                     </form>
                 </div>
             </div>

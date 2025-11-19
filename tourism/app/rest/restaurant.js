@@ -9,6 +9,7 @@
     }
 
     let restaurants = [];
+    let currentCuisines = [];
 
     function loadRestaurants() {
         let data = localStorage.getItem("restaurants");
@@ -67,7 +68,76 @@
         detailsDiv.appendChild(pOpis);
     }
 
+    function renderCuisineChips(){
+
+        const chipsDiv = document.querySelector("#cuisineChips");
+        if (!chipsDiv) return;
+        chipsDiv.innerHTML = "";
+
+        currentCuisines.forEach((k, index) => {
+            const span = document.createElement("span");
+            span.className = "chip";
+            span.textContent = k;
+
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.textContent = "x";
+            btn.addEventListener("click", function () {
+                currentCuisines.splice(index, 1);
+                renderCuisineChips();
+            });
+
+            span.appendChild(btn);
+            chipsDiv.appendChild(span);
+        });
+    }
+
+    function setupCuisineAdding() {
+        const addBtn = document.querySelector("#addCuisineBtn");
+        const input = document.querySelector("#kuhinjaInput");
+
+        if (!addBtn || !input) return;
+
+        addBtn.addEventListener("click", function () {
+            let value = input.value.trim();
+            if (!value) return;
+
+            currentCuisines.push(value);
+            input.value = "";
+            renderCuisineChips();
+        });
+    }
+
+    function handleFormSubmission() {
+        const form = document.querySelector("#restaurantForm");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let naziv = document.querySelector("#naziv").value.trim();
+            let opis = document.querySelector("#opis").value.trim();
+            // tip i duzina ne koristimo u modelu, zadatak traži: naziv, opis, tipovi kuhinje
+
+            if (!naziv || !opis || currentCuisines.length === 0) {
+                alert("Molimo popunite Naziv, Opis i bar jednu kuhinju.");
+                return;
+            }
+
+            const newRestaurant = new Restoran(naziv, opis, [...currentCuisines]);
+            restaurants.push(newRestaurant);
+            localStorage.setItem("restaurants", JSON.stringify(restaurants));
+
+            renderTable();
+            form.reset();
+            currentCuisines = [];
+            renderCuisineChips();
+        });
+    }
+
     window.addEventListener("DOMContentLoaded", function () {
         loadRestaurants();
         renderTable();
+        setupCuisineAdding();
+        handleFormSubmission();
     });
